@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="pro-congress-113-senate.js"> </script>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+    </style>
+
+    <title>Document</title>
+
+    <table id="senate-data" style="width:70%">
+        <tr>
+            <th>Nombre completo</th>
+            <th>Fiesta</th>
+            <th>Estado</th>
+            <th>Antigüedad</th>
+            <th>% Votos</th>
+          </tr>
+    </table>
+
+    <script> 
+        
+        items_table = document.getElementById("senate-data");
+        
+        data.results[0].members.forEach( function(valor, indice, array) {
+            items_table.innerHTML+= 
+            '<tr><td>' 
+                + valor.first_name + ' ' + valor.last_name + 
+            '</td><td>' 
+                + valor.party + 
+            '</td><td>' 
+                + valor.state + 
+            '</td><td>'
+                + valor.seniority + 
+            '</td><td>' 
+                + valor.votes_with_party_pct + '%' +
+            '</td></tr>';
+        });
+
+     </script>
+</head>
+<body>
+    
+</body>
+</html>
